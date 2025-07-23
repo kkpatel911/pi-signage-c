@@ -1,8 +1,8 @@
 FROM debian:bookworm
 
-# Install Qt6 and Qt WebEngine dependencies
+# Install Qt6, pkg-config and dependencies
 RUN apt-get update && \
-    apt-get install -y qt6-base-dev qt6-webengine-dev libgl1-mesa-glx g++ \
+    apt-get install -y qt6-base-dev qt6-webengine-dev libgl1-mesa-glx g++ pkg-config \
     && apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
