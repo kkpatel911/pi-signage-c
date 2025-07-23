@@ -5,6 +5,8 @@
 int main(int argc, char *argv[]) {
     QApplication app(argc, argv);
 
+    // Hide the mouse cursor
+    QGuiApplication::setOverrideCursor(Qt::BlankCursor);
     QWebEngineView view;
     view.settings()->setAttribute(QWebEngineSettings::PluginsEnabled, true);
     view.settings()->setAttribute(QWebEngineSettings::FullScreenSupportEnabled, true);
