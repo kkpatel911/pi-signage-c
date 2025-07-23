@@ -1,4 +1,4 @@
-FROM debian:bookworm
+FROM arm64v8/debian:bookworm
 
 # Install Qt6, pkg-config and dependencies
 RUN apt-get update && \
