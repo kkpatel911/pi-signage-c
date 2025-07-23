@@ -17,4 +17,5 @@ COPY sample.mp4 .
 RUN g++ main.cpp -o minimal_signage_app `pkg-config --cflags --libs Qt6WebEngineWidgets Qt6Widgets Qt6Core Qt6Gui`
 
 # Run at startup
+ENV QTWEBENGINE_CHROMIUM_FLAGS="--no-sandbox"
 CMD ["./minimal_signage_app"]
